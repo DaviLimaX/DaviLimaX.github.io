@@ -1,0 +1,14 @@
+@media (max-width: 1050px) {
+
+    footer div.figures {
+    grid-template-columns: none;
+    }
+}
+
+@media (max-width: 950px) {
+
+    header div#inicio{
+    flex-direction: column;
+    }
+}
+

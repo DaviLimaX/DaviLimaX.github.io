@@ -1,5 +1,11 @@
 /* Configurações Globais */
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     background-color: cornflowerblue;
@@ -23,7 +29,7 @@ p {
 
 div.container {
     width: 90%;
-    max-width: 980px;
+    max-width: 1100px;
     margin: 0 auto;
 }
 
@@ -74,6 +80,7 @@ main {
 /* aqui eu estilizei os forms, e coloquei em forma de coluna os elementos, além de uma cor de fundo para diferenciar
 do background do body */
 main form {
+    max-width: 700px;
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -150,18 +157,24 @@ main div#res {
 }
 
 /* no footer fiz algumas pequenas alterações pra tentar deixar mais "clean" */
+
+footer {
+    justify-content: center;
+}
+
 footer p {
     font-family: roboto;
     font-size: 18;
 }
 
 footer div.figures {
+    margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
 
     gap: 0;
 
-    justify-content: center;
+    justify-items: center;
 }
 
 footer div.figures figure {
@@ -172,6 +185,8 @@ footer div.figures figure {
     width: max-content;
 
     text-align: center;
+
+    margin: 40px 0 0 0;
 }
 
 footer div.figures figure img {
