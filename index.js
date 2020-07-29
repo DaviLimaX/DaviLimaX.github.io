@@ -44,7 +44,7 @@
                        hora.innerHTML =(`Boa Tarde!`)
                    }
                    else {
-                       horario.innerHTML =(`Boa Noite!`)
+                       hora.innerHTML =(`Boa Noite!`)
                    }
 
            var dia = agora.getDay()
