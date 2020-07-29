@@ -4,8 +4,7 @@
 
             as funções "entrar" e "sair" são pra orientar a interação com o botão "clique aqui"
         */
-       function sub(){
-
+        function sub(){
         var button = window.document.getElementById('button') 
         var nome = window.document.getElementById('usuario')
         var cg = window.document.getElementById('aulas')
@@ -15,20 +14,52 @@
         var n1 = Number(cg.value)
         var n2 = Number(resto.value)
         var sub = n1 - n2
+
+        if (nome.value.length == 0 || cg.value.length == 0 || resto.value.length == 0)
+        { 
+         alert("Por favor, preencha todos os campos!");  	
+         return false; 
+        }
+
+        // Sumir o form, e aparecer o botao de voltar
+        const form = document.querySelector("form")
+        const back = document.querySelector("button#back")
+        const result = document.querySelector("div#res")
+
+        form.classList.add("form")
+
+        back.classList.remove("back")
+
+        result.classList.remove("back")
+
         
         /* condições pra aparecer as mensagens de resposta aos dados do usuário*/
                
 
                 if (sub==0) {
-                res.innerHTML = `BOA <strong>${usuario}</strong>! AGORA RESTAM ${sub} AULAS! (Não fez mais que sua obrigação )`
+                res.innerHTML = `Boa <strong>${usuario}</strong>! agora restam ${sub} aulas! (Não fez mais que sua obrigação)`
                 }
                 else
-                res.innerHTML = `vamo lá <strong>${usuario}</strong> , ${sub} aula(s) restante(s) ainda!`
+                res.innerHTML = `Vamo lá <strong>${usuario}</strong> , ${sub} aula(s) restante(s) ainda!`
                 if (sub<0 || n2<0) {
                 res.innerHTML = `Ops, por favor ${usuario}, reveja a quantidade de aulas e tente novamente!`
                     }
         }
+        
+        function back(){
 
+            const form = document.querySelector("form")
+            const back = document.querySelector("button#back")
+            const result = document.querySelector("div#res")
+
+            form.classList.remove("form")
+
+            back.classList.add("back")
+
+            result.classList.add("back")
+        }
+    
+        // Funções de horário
            var agora = new Date()
            var horario = agora.getHours()
            var minutos = agora.getMinutes()
