@@ -79,16 +79,19 @@ main {
 
 /* aqui eu estilizei os forms, e coloquei em forma de coluna os elementos, além de uma cor de fundo para diferenciar
 do background do body */
+main form.form {
+    display: none;
+}
 main form {
-    max-width: 700px;
     display: flex;
     flex-direction: column;
     flex: 1;
     margin: 80px auto;
     padding: 40;
     border-radius: 10px;
-    background-color: #5d8be0;
+    background-color: #5984D4;
     max-width: 650px;
+    transition: 400ms;
 }
 
 main form label {
@@ -111,8 +114,9 @@ main form input {
 }
 
 /* eu deixei o esquema do botão só aqui, e removi do script, só falta tirar o estilo onclick (vou descobrir como faz) */
-main form input.button{
-    text-align: justify;
+main form .button{
+    cursor: pointer;
+    align-self: center;
     margin: 20 0 0 0;
     background-color: #34cb79;
     border: none;
@@ -125,8 +129,24 @@ main form input.button{
     font-weight: bold;
 }
 
-main form input.button:hover {
+main form .button:hover {
     background-color: #1ca85b;
+}
+
+main .back {
+    display: none;
+}
+
+main button#back {
+    cursor: pointer;
+    border: none;
+
+    background-color: #5984D4;
+    color: ghostwhite;
+    font-family: nunito;
+
+    padding: 4px;
+    border-radius: 8px 8px 0 0;
 }
 
 /* Estilo do script */
@@ -145,15 +165,15 @@ main div#tempo {
     }
 
 main div#res {
-    font: impact;
-
     text-shadow: 3px 3px 3px black;
-
     color: ivory;
 
     font-size: 35px;
-
     text-align: center;
+    border-radius: 0 8px 8px 8px;
+
+    background-color: #5984D4;
+    padding: 40px;
 }
 
 /* no footer fiz algumas pequenas alterações pra tentar deixar mais "clean" */
@@ -222,6 +242,15 @@ footer figure.efeitos:hover figcaption {
 
 }
 
+footer figure.efeitos figcaption a {
+    text-decoration: none;
+    color: white;
+    transition: 500ms;
+}
+
+footer figure.efeitos figcaption a:hover {
+    color: lightgray;
+}
 footer div#links {
     margin: 100px 0 10px 0;
     display: flex;
@@ -230,5 +259,5 @@ footer div#links {
 
 footer div#links a img {
     height: 50px;
-    margin-right: 20px;
+    margin-right: 3px;
 }
