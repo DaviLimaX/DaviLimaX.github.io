@@ -222,13 +222,13 @@ footer figure.efeitos:hover figcaption {
 
 }
 
-footer h3 {
-    text-align: center;
-    margin-top: 100px;
-    color: #34cb79;
+footer div#links {
+    margin: 100px 0 10px 0;
+    display: flex;
+    justify-content: center;
+}
 
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 50;
-    
-    text-shadow: 2px 2px 2px rgb(7, 7, 7);
+footer div#links a img {
+    height: 50px;
+    margin-right: 20px;
 }

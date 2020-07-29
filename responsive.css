@@ -5,10 +5,27 @@
     }
 }
 
-@media (max-width: 950px) {
+@media (max-width: 980px) {
 
     header div#inicio{
     flex-direction: column;
     }
+    header div#hora {
+        margin: 0;
+    }
 }
 
+@media (max-width: 520px) {
+    body {
+        position: absolute;
+    }
+
+    footer div.figures figure img {
+        height: 200px;
+        width: 300px;
+    }
+
+    footer h3 {
+        font-size: 30px;
+    }
+}
